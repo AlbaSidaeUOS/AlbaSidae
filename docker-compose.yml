@@ -29,8 +29,7 @@ services:
     depends_on:
       - db
     volumes:
-      - ./backend:/app  # 로컬 backend 디렉토리를 컨테이너의 /app에 마운트
-      - /app/build  # 기존 빌드 결과 유지
+    - ./backend/src:/app/src
 
   db:
     image: mysql:8.0
@@ -38,7 +37,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: albasidae  # 데이터베이스 이름을 albasidae로 설정
     ports:
-      - "3306:3306"  # 로컬에서 접근할 수 있도록 포트 노출
+      - "3305:3306"  # 호스트에서 3305 포트를 사용, 컨테이너 내에서는 여전히 3306 포트 사용
     networks:
       - app-network
 
