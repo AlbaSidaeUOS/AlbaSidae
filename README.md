@@ -69,15 +69,14 @@ docker-compose down
    - 다시 시작하려면 **Start** 버튼을 클릭합니다.
    - 
 ### 효율적인 사용 방법
-- **프론트엔드 개발자**:
+- **프론트엔드 개발자**: 백엔드와 db 컨테이너만 사용 후 로컬에서 작업.
   ```
   docker-compose up --build backend db
   ```
-  (백엔드와 db 컨테이너만 사용) 후 로컬에서 작업.
-- **백엔드 개발자**:
+  
+- **백엔드 개발자**: 프론트엔드와 db 컨테이너만 사용 후 로컬에서 작업, 이 경우 application.properties에서 datasource.url 변경
   ```
   docker-compose up --build frontend db
   ```
-  (프론트엔드와 db 컨테이너만 사용) 후 로컬에서 작업, 이 경우 application.properties에서 datasource.url 변경
 ---
 
