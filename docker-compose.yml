@@ -9,6 +9,9 @@ services:
       - app-network
     environment:
       - REACT_APP_API_URL=http://backend:8080  # 백엔드와 통신
+    volumes:
+      - ./frontend:/app  # 로컬 frontend 디렉토리를 컨테이너의 /app에 마운트
+      - /app/node_modules  # node_modules는 볼륨에서 제외하여 충돌 방지
 
   backend:
     build:
@@ -17,17 +20,25 @@ services:
       - "8080:8080"
     networks:
       - app-network
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/albasidae  # DB 컨테이너와 연결
+      - SPRING_DATASOURCE_USERNAME=root
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update  # DB 스키마 자동 업데이트
+      - SPRING_DEVTOOLS_REMOTE_ENABLED=true  # DevTools 핫 리로딩 활성화
     depends_on:
       - db
+    volumes:
+      - ./backend:/app  # 로컬 backend 디렉토리를 컨테이너의 /app에 마운트
+      - /app/build  # 기존 빌드 결과 유지
 
   db:
-    image: postgres:15-alpine
+    image: mysql:8.0
     environment:
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
-      POSTGRES_DB: mydatabase
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: albasidae  # 데이터베이스 이름을 albasidae로 설정
     ports:
-      - "5432:5432"
+      - "3306:3306"  # 로컬에서 접근할 수 있도록 포트 노출
     networks:
       - app-network
 
