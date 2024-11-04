@@ -20,6 +20,7 @@ import WorkTime from "../components/RegistNotice/WorkTime";
 import WorkType from "../components/RegistNotice/WorkType";
 import ResumeProfile from "../components/RegistResume/ResumeProfile";
 import { AuthContext } from "../components/auth/AuthContext";
+import Workplace from "../components/RegistResume/Workplace";
 
 const RegistNotice = () => {
   const navigate = useNavigate();
@@ -41,6 +42,7 @@ const RegistNotice = () => {
     age: "",
     deadline: "",
     submitMethod: [],
+    place: [],
   });
 
   useEffect(() => {
@@ -62,6 +64,8 @@ const RegistNotice = () => {
 
   const handleSubmit = () => {
     console.log(formData);
+    alert("공고 등록이 완료되었습니다.");
+    navigate("/");
   };
 
   return (
@@ -94,7 +98,10 @@ const RegistNotice = () => {
             onChange={handleChange("noticeCompanyContent")}
           />
         </S.SubTitleWrapper>
-
+        <S.SubTitleWrapper>
+          <S.SubTitle>근무 장소</S.SubTitle>
+          <Workplace value={formData.place} onChange={handleChange("place")} />
+        </S.SubTitleWrapper>
         <S.SubTitleWrapper>
           <S.SubTitle>근무처 사진</S.SubTitle>
           <NoticeCompanyImage
