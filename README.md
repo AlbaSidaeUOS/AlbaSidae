@@ -4,8 +4,7 @@
 - 각 레포지토리가 merge될 때마다 이 repository가 자동으로 업데이트 됩니다.
 - 처음 1회 git clone 후, 업데이트 될 때마다 git pull 해서 사용합니다.
 ```
-git clone https://github.com/AlbaSidaeUOS/AlbaSidae-FE.git
-```
+git clone https://github.com/AlbaSidaeUOS/AlbaSidae.git
 
 ## Docker 가이드
 
