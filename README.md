@@ -1,5 +1,6 @@
 
 # 가이드
+- 이 레포지토리는 개발울 위한 레포지토리가 아닌 Docker Container 실행을 위한 레포지토리입니다.
 - 각 레포지토리가 merge될 때마다 이 repository가 자동으로 업데이트 됩니다.
 - 처음 1회 git clone 후, 업데이트 될 때마다 git pull 해서 사용합니다.
 ```
@@ -67,7 +68,7 @@ Docker Desktop에서 컨테이너를 정지하여 종료할 수 있습니다.
    - 다시 시작하려면 **Start** 버튼을 클릭합니다.
    - 
 ### 권장하는 사용 방법
-- **프론트엔드 개발자**: 백엔드와 db 컨테이너만 사용 후 로컬에서 작업.
+- **프론트엔드 개발자**: 백엔드와 db 컨테이너만 사용 후 로컬에서 작업
   ```
   docker-compose up --build backend db
   ```
@@ -76,7 +77,5 @@ Docker Desktop에서 컨테이너를 정지하여 종료할 수 있습니다.
   ```
   docker-compose up --build frontend db
   ```
-
-- 전체 빌드 후 
----
+- 전체 실행 후 본인이 작업하는 컨테이너만 stop해서 작업
 
