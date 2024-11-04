@@ -1,13 +1,10 @@
 
-## 가이드
-
-- Notion에서 새로운 업무 단위마다 티켓을 생성 후, Decription에 어떤 내용인지 작성해주세요.
-- 각 티켓의 ID명과 동일한 branch를 생성해주세요.
-- 개별 branch에서 작업을 모두 한 뒤, 모든 commit을 push하고 github에서 PR(Pull Request)을 합니다.
-- 하나의 branch의 내용이 너무 많지 않도록 만들어주세요.
-- 새로운 branch를 만들때, main branch에서 git pull을 하고 생성해주세요.
-- Commit message는 https://velog.io/@jiheon/Git-Commit-message-%EA%B7%9C%EC%B9%99 를 따라주세요.
-- 주의: **main branch에 절대 push 하지마세요.**
+# 가이드
+- 각 레포지토리가 merge될 때마다 이 repository가 자동으로 업데이트 됩니다.
+- 처음 1회 git clone 후, 업데이트 될 때마다 git pull 해서 사용합니다.
+```
+git clone https://github.com/AlbaSidaeUOS/AlbaSidae-FE.git
+```
 
 ## Docker 가이드
 
@@ -58,6 +55,7 @@ docker-compose up -d --build
 ```
 docker-compose down
 ```
+Docker Desktop에서 컨테이너를 정지하여 종료할 수 있습니다.
 
 ---
 
@@ -68,15 +66,17 @@ docker-compose down
    - 중지할 컨테이너를 선택하고 **Stop** 버튼을 클릭합니다.
    - 다시 시작하려면 **Start** 버튼을 클릭합니다.
    - 
-### 효율적인 사용 방법
+### 권장하는 사용 방법
 - **프론트엔드 개발자**: 백엔드와 db 컨테이너만 사용 후 로컬에서 작업.
   ```
   docker-compose up --build backend db
   ```
   
-- **백엔드 개발자**: 프론트엔드와 db 컨테이너만 사용 후 로컬에서 작업, 이 경우 application.properties에서 datasource.url 변경
+- **백엔드 개발자**: 프론트엔드와 db 컨테이너만 사용 후 로컬에서 작업
   ```
   docker-compose up --build frontend db
   ```
+
+- 전체 빌드 후 
 ---
 
