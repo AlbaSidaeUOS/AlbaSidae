@@ -18,7 +18,7 @@ public class UserController {
     @PostMapping("/register")
     public ResponseEntity<ApiResponse<UserDto>> registerUser(@RequestBody UserDto userDto) {
         UserDto registeredUser = userService.registerUser(userDto, userDto.getPassword());
-        return ResponseEntity.ok(new ApiResponse<>(true, "회원가입 완료되었습니다.", registeredUser));
+        return ResponseEntity.ok(new ApiResponse<>(true, "회원가입이 완료되었습니다.", registeredUser));
     }
 
     // 로그인

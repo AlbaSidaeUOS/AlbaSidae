@@ -33,7 +33,7 @@ public class UserService {
     public UserDto registerUser(UserDto userDto, String rawPassword) {
         // 이메일 형식 검증
         if (!EMAIL_PATTERN.matcher(userDto.getEmail()).matches()) {
-            throw new IllegalArgumentException("올바르지 않은 이메일 형식입니다");
+            throw new IllegalArgumentException("올바르지 않은 이메일 형식입니다.");
         }
 
         // 이메일 중복 확인
