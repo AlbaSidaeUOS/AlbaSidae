@@ -52,6 +52,7 @@ public class UserService {
         user.setRole(userDto.getRole());
         user.setName(userDto.getName());
         user.setBirthDate(userDto.getBirthDate());
+        user.setGender(userDto.getGender());
         user.setPhone(userDto.getPhone());
         user.setBusinessNumber(userDto.getBusinessNumber());
 
@@ -62,8 +63,10 @@ public class UserService {
                 null, // 비밀번호는 반환하지 않음
                 savedUser.getName(),
                 savedUser.getBirthDate(),
+                savedUser.getGender(),
                 savedUser.getPhone(),
                 savedUser.getBusinessNumber(),
+                savedUser.getImage(),
                 savedUser.getRole()
         );
     }
@@ -116,8 +119,10 @@ public class UserService {
                 null,
                 user.getName(),
                 user.getBirthDate(),
+                user.getGender(),
                 user.getPhone(),
                 user.getBusinessNumber(),
+                user.getImage(),
                 user.getRole()
         );
     }
@@ -146,8 +151,10 @@ public class UserService {
                 null,
                 updatedUser.getName(),
                 updatedUser.getBirthDate(),
+                updatedUser.getGender(),
                 updatedUser.getPhone(),
                 updatedUser.getBusinessNumber(),
+                updatedUser.getImage(),
                 updatedUser.getRole()
         );
     }
