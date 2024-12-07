@@ -37,10 +37,11 @@ UOS Works
 - 테스트: 사용자의 프론트엔드와 백엔드, 데이터베이스와 애플리케이션 간의 통합 테스트를 진행해야 한다. 외부 서비스 API와의 통합 테스트를 진행해야 한다. 사용성 테스트를 통해 UX를 개선해야 한다. 인증 및 권한 테스트로 인증 관련 로직이 제대로 동작하는지 테스트를 진행해야 한다. API의 응답 시간은 일반적인 요청에 대해 최대 1초 이내여야 하며 사용자가 경험하는 페이지 로딩 시간은 최대 3초 이내의 응답 시간을 목표로 하여 성능 테스트를 진행해야 한다.
 
 # High level Architecture
-- Tier Architecture
-<img width="70%" alt="tier_architecture" src="https://github.com/user-attachments/assets/37cc9cc2-ea70-43d0-a8cd-4a76bcbd2128">
-- MVC Architecture
-<img width="70%" alt="mvc_architecture" src="https://github.com/user-attachments/assets/d855341f-ac50-4189-bcad-0a2278897950">
+### Tier Architecture
+<img width="90%" alt="tier_architecture" src="https://github.com/user-attachments/assets/37cc9cc2-ea70-43d0-a8cd-4a76bcbd2128">
+
+### MVC Architecture
+<img width="90%" alt="mvc_architecture" src="https://github.com/user-attachments/assets/d855341f-ac50-4189-bcad-0a2278897950">
 
 # Technology stacks
 ### ✔️Front-end
@@ -79,14 +80,39 @@ npm start
 - Architecture 및 Design Documents: 
   - Software Architecture
     - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/High-level%20Architecture%20UML%20Diagrams%20Document_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.pptx
-  - Software Design: 
+  - Software Design
+    - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/UML%20Diagram%20Raw%20file_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.zip
   - UI Design
     - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/UI%20Design%20Document_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.pptx
 - Coding Standard
   - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/Coding%20Standard%2C%20Repository%20Management%20and%20Review%20Process_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.docx
-- Code:
+- Code
+  - Notion에서 새로운 업무 단위마다 티켓을 생성 후, Decription에 어떤 내용인지 작성한다.
+  - 각 티켓의 ID명과 동일한 branch를 생성한다. (ID명: Front-end는 FE-# 형태, Back-end는 BE-# 형태를 따른다.)
+  - Front-end는 [AlbaSidae-FE](https://github.com/AlbaSidaeUOS/AlbaSidae-FE) repository에서 작업하고 Back-end는 [AlbaSidae-BE](https://github.com/AlbaSidaeUOS/AlbaSidae-BE)에서 작업한다.
+  - [AlbaSidae-FE](https://github.com/AlbaSidaeUOS/AlbaSidae-FE)와 [AlbaSidae-BE](https://github.com/AlbaSidaeUOS/AlbaSidae-BE)에서 PR(Pull Request) merge와 같은 main branch에 push가 발생할 경우, github actions를 통해 [Albasidae](https://github.com/AlbaSidaeUOS/AlbaSidae)의 main branch에 merge된다.
 - Test cases & results
 
 # Repository Structure
-
-
+## frontend directory
+```
+📦src
+ ┣ 📂components # 재사용 가능한 컴포넌트들이 위치한 디렉토리
+ ┣ 📂images # 애플리케이션에서 사용하는 이미지 파일들을 저장한 디렉토리
+ ┣ 📂mock # 애플리케이션에서 사용하는 목업 데이터가 저장된 디렉토리
+ ┣ 📂pages # 애플리케이션의 각 페이지를 구성하는 컴포넌트가 위한 디렉토리
+ ┣ 📂uis # 재사용 가능한 UI 요소와 스타일을 포함하는 디렉토리
+ ┣ 📜App.css 
+ ┣ 📜App.jsx # 애플리케이션의 루트 컴포넌트
+ ┣ 📜index.css
+ ┗ 📜index.js # 애플리케이션의 Entry Point 파일
+```
+## backend directory
+```
+```
+### proposal directory
+- SOW.md (Statement of Work) 프로젝트에서 수행할 작업, 범위, 일정 등을 명확히 정의하는 문서를 담고 있다.
+### artifacts directory
+- High-level Architecture, Sequence, Class Diagram과 UML design, UI design, Coding Standard, Test cases&results, Requirements 문서들의 모든 버전을 담고 있다.
+### reports
+- Midterm presentation slides, Final presentation slides, Demo video를 담고 있다.
