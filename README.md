@@ -57,7 +57,7 @@ UOS Works
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"><img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white">
 
 # Installation guideline
-## FE
+### FE
 - node.js 설치
 ```
 # 의존성 설치
@@ -69,15 +69,15 @@ npm start
 - Vercel Deployment
   - https://albasidae-fe.vercel.app/
 
-## BE
+### BE
 
-## Docker
+### Docker
 - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/docker_guide.md  
 
 # Project Delieverables
 - 요구사항 분석 명세서 final version
   - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/Requirements-Albasidae-v02.docx
-- Architecture 및 Design Documents: 
+- Architecture 및 Design Documents
   - Software Architecture
     - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/High-level%20Architecture%20UML%20Diagrams%20Document_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.pptx
   - Software Design
