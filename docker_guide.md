@@ -1,6 +1,6 @@
 
 # 가이드
-- 이 레포지토리는 개발을 위한 레포지토리가 아닌 Docker Container 실행을 위한 레포지토리입니다.
+- Docker Container 실행을 위한 가이드입니다.
 - 각 레포지토리가 merge될 때마다 이 repository가 자동으로 업데이트 됩니다.
 - 처음 1회 git clone 후, 업데이트 될 때마다 git pull 해서 사용합니다.
 ```
