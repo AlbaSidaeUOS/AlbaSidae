@@ -37,7 +37,10 @@ UOS Works
 - 테스트: 사용자의 프론트엔드와 백엔드, 데이터베이스와 애플리케이션 간의 통합 테스트를 진행해야 한다. 외부 서비스 API와의 통합 테스트를 진행해야 한다. 사용성 테스트를 통해 UX를 개선해야 한다. 인증 및 권한 테스트로 인증 관련 로직이 제대로 동작하는지 테스트를 진행해야 한다. API의 응답 시간은 일반적인 요청에 대해 최대 1초 이내여야 하며 사용자가 경험하는 페이지 로딩 시간은 최대 3초 이내의 응답 시간을 목표로 하여 성능 테스트를 진행해야 한다.
 
 # High level Architecture
-
+- Tier Architecture
+<img width="70%" alt="tier_architecture" src="https://github.com/user-attachments/assets/37cc9cc2-ea70-43d0-a8cd-4a76bcbd2128">
+- MVC Architecture
+<img width="70%" alt="mvc_architecture" src="https://github.com/user-attachments/assets/d855341f-ac50-4189-bcad-0a2278897950">
 
 # Technology stacks
 ### ✔️Front-end
@@ -53,8 +56,37 @@ UOS Works
 <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"><img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=Notion&logoColor=white">
 
 # Installation guideline
+## FE
+- node.js 설치
+```
+# 의존성 설치
+npm install
+
+# 실행
+npm start
+```
+- Vercel Deployment
+  - https://albasidae-fe.vercel.app/
+
+## BE
+
+## Docker
+- https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/docker_guide.md  
 
 # Project Delieverables
+- 요구사항 분석 명세서 final version
+  - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/Requirements-Albasidae-v02.docx
+- Architecture 및 Design Documents: 
+  - Software Architecture
+    - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/High-level%20Architecture%20UML%20Diagrams%20Document_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.pptx
+  - Software Design: 
+  - UI Design
+    - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/UI%20Design%20Document_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.pptx
+- Coding Standard
+  - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/Coding%20Standard%2C%20Repository%20Management%20and%20Review%20Process_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.docx
+- Code:
+- Test cases & results
 
 # Repository Structure
+
 
