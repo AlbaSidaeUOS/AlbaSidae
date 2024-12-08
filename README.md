@@ -70,6 +70,7 @@ npm start
   - https://albasidae-fe.vercel.app/
 
 ### BE
+- spring 설치
 
 ### Docker
 - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/docker_guide.md  
