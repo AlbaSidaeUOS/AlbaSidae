@@ -114,6 +114,7 @@ npm start
 ```
 ### backend directory
 ```
+📦src
  ┣ 📂config # 웹 환경 설정 및 보안 설정을 정의하는 객체들이 모인 디렉토리
  ┣ 📂controller # 명령을 입력받는 객체들이 정의된 디렉토리
  ┣ 📂dto # 전달하고 싶은 데이터를 담고 있는 객체들이 정의된 디렉토리
