@@ -94,7 +94,123 @@ npm start
     - Front-end는 [AlbaSidae-FE](https://github.com/AlbaSidaeUOS/AlbaSidae-FE) repository에서 작업하고 Back-end는 [AlbaSidae-BE](https://github.com/AlbaSidaeUOS/AlbaSidae-BE)에서 작업한다.
     - [AlbaSidae-FE](https://github.com/AlbaSidaeUOS/AlbaSidae-FE)와 [AlbaSidae-BE](https://github.com/AlbaSidaeUOS/AlbaSidae-BE)에서 PR(Pull Request) merge와 같은 main branch에 push가 발생할 경우, github actions를 통해 [Albasidae](https://github.com/AlbaSidaeUOS/AlbaSidae)의 main branch에 merge된다.
   - Key Logic and Code Description
-    - ?
+# 프로젝트 구조
+
+# 📁 main/java/albabe/albabe
+---
+## 📂 config
+- **AwsConfig.java**  
+  : S3 서비스를 이용하기 위한 설정 소스파일
+- **SecurityConfig.java**  
+  : 보안 관련 설정 소스파일
+
+---
+
+## 📂 domain
+---
+---
+##### 📂 controller
+컨트롤러 소스파일들의 모음. 기능을 사용하기 위한 역할을 수행합니다.
+- **JobApplicationController.java**  
+  : 알바 지원에 관련된 컨트롤러 소스파일
+- **JobPostController.java**  
+  : 모집 공고와 관련된 컨트롤러 소스파일
+- **ResumeController.java**  
+  : 이력서와 관련된 컨트롤러 소스파일
+- **TimeTableController.java**  
+  : 시간표 등록과 관련된 컨트롤러 소스파일
+- **UserController.java**  
+  : 회원과 관련된 컨트롤러 소스파일
+---
+##### 📂 dto
+Dto 소스파일들의 모음. Entity에서 가져온 데이터의 틀 역할을 합니다.
+- **CompanyDto.java**  
+  : 기업정보 Dto 소스파일
+- **FilterDto.java**  
+  : 필터링 Dto 소스파일
+- **JobApplicationDto.java**  
+  : 알바 지원 Dto 소스파일
+- **JobPostResponse.java**  
+  : 모집 공고 Dto 소스파일
+- **PersonalDto.java**  
+  : 개인 회원 Dto 소스파일
+- **ResumeDto.java**  
+  : 이력서 Dto 소스파일
+- **TimeTableDto.java**  
+  : 시간표 Dto 소스파일
+- **UserDto.java**  
+  : 회원 Dto 소스파일
+---
+##### 📂 entity
+Entity 소스파일들의 모음. DB의 데이터와 대응합니다.
+- **JobApplicationEntity.java**  
+  : 알바 지원 Entity 소스파일
+- **JobPostEntity.java**  
+  : 모집 공고 Entity 소스파일
+- **ResumeEntity.java**  
+  : 이력서 Entity 소스파일
+- **TimeTableEntity.java**  
+  : 시간표 Entity 소스파일
+- **UserEntity.java**  
+  : 회원 Entity 소스파일
+---
+##### 📂 enums
+- **UserRole.java**  
+  : 회원 종류를 담고 있는 enum 자료형 선언 소스파일
+---
+##### 📂 repository
+JPA를 사용해 DB와 연결하는 역할을 합니다.
+- **JobApplicationRepository.java**  
+  : 알바 지원 Repository 소스파일. 모집 공고 찾기, 삭제 함수 존재
+- **JobPostRepository.java**  
+  : 모집 공고 Repository 소스파일. 모집 공고 정렬, 찾기, 필터링된 모집 공고 조회, 검색 함수 존재
+- **ResumeRepository.java**  
+  : 이력서 Repository 소스파일. 이력서 찾기 함수 존재
+- **TimeTableRepository.java**  
+  : 시간표 Repository 소스파일. 시간표 찾기 함수 존재
+- **UserRepository.java**  
+  : 회원 Repository 소스파일. 사용자 찾기 함수 존재
+---
+##### 📂 service
+컨트롤러의 기능들을 구현합니다.
+- **JobApplicationService.java**  
+  : 알바 지원 Service 소스파일. 알바 지원 관련 함수들, JobPostEntity를 JobPostDto로 변환하는 함수 구현
+- **JobPostService.java**  
+  : 모집 공고 Service 소스파일. 필터링 기능 함수, 공고 관련 함수들 구현
+- **ResumeService.java**  
+  : 이력서 Service 소스파일. 이력서 등록/수정/삭제 관련 함수들 구현
+- **S3Service.java**  
+  : S3 기능 중 파일 업로드 기능을 맡은 소스파일
+- **TimeTableService.java**  
+  : 시간표 Service 소스파일. 시간표 등록/수정/조회 함수 구현
+- **UserService.java**  
+  : 회원 Service 소스파일. 회원가입, 로그인, 아이디/비밀번호 찾기, 회원 정보 수정, 사용자 삭제, 유저 이미지 업로드 함수 구현
+---
+---
+## 📂 exception
+- **GlobalExceptionHandler.java**  
+  : 예외 처리에 관한 소스파일
+
+---
+
+## 📂 security
+- **JwtTokenProvider.java**  
+  : Jwt Token에 관한 소스파일
+
+---
+
+## 📂 util
+- **ApiResponse.java**  
+  : ApiResponse를 정의하는 소스파일
+
+---
+
+## 📂 application
+- **AlbaBeApplication.java**  
+  : 프로그램 실행 소스파일
+
+
+
 - Test cases & results
   - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/test%20cases%20and%20results_albasidae_v01.xlsx
 
