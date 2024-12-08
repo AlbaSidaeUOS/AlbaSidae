@@ -70,7 +70,7 @@ npm start
   - https://albasidae-fe.vercel.app/
 
 ### BE
-- spring 설치
+- 웹페이지 접속
 
 ### Docker
 - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/docker_guide.md  
@@ -114,6 +114,14 @@ npm start
 ```
 ### backend directory
 ```
+ ┣ 📂config # 웹 환경 설정 및 보안 설정을 정의하는 객체들이 모인 디렉토리
+ ┣ 📂controller # 명령을 입력받는 객체들이 정의된 디렉토리
+ ┣ 📂dto # 전달하고 싶은 데이터를 담고 있는 객체들이 정의된 디렉토리
+ ┣ 📂entity # 데이터 구조를 정의하고 데이터베이스와 매핑하는 객체들이 정의된 디렉토리
+ ┣ 📂enums # user의 역할의 종류가 정의된 디렉토리
+ ┣ 📂repository # 데이터를 조회하거나 조작하는 작업을 처리하는 객체들이 정의된 디렉토리
+ ┣ 📂service # 입력받은 명령을 수행하는 객체들이 정의된 디렉토리
+ ┣ 📂exception # 예외를 처리하는 객체가 정의된 디렉토리
 ```
 ### proposal directory
 - SOW.md (Statement of Work) 프로젝트에서 수행할 작업, 범위, 일정 등을 명확히 정의하는 문서를 담고 있다.
