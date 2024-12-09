@@ -71,7 +71,14 @@ npm start
   - https://albasidae-fe.vercel.app/
 
 ### BE
-- 웹페이지 접속
+- Intellij IDEA 설치
+- AlbasidaeUOS/Albasidae-BE repository의 zip파일 다운로드
+- Docker에서 albasidae-backend-1 컨테이너를 제외하고 실행
+- src/main/java/albabe.albabe에서 AlbaBeApplication 실행
+- swagger는 http://localhost:8080/swagger-ui/index.html, 웹 페이지는 localhost:3000 으로 접속
+
+- Vercel Deployment
+  - https://albasidae-fe.vercel.app/
 
 ### Docker
 - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/docker_guide.md  
