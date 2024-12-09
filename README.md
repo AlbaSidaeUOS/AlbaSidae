@@ -24,7 +24,8 @@ UOS Works
 - 인재 정보, 공고 정보 등록, 수정, 삭제
 - 구직자 지역, 하는 일, 근무조건, **시간표** 필터링
 - 알바 지도 확인 서비스
-- Demo Video(넣어야함)
+- Demo Video URL
+  - https://youtu.be/P26uF7IQ3sk
 
 # Project Constraints
 - 플랫폼 접근성: 다양한 사용자층이 접근할 수 있도록, 시스템은 웹 브라우저를 통해 구현되어야 한다.
