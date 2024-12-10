@@ -4,7 +4,7 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>496</x>
+      <x>512</x>
       <y>80</y>
       <w>168</w>
       <h>64</h>
@@ -21,7 +21,7 @@ PERSONAL
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
+      <x>352</x>
       <y>200</y>
       <w>168</w>
       <h>144</h>
@@ -42,20 +42,20 @@ role</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>624</x>
+      <x>640</x>
       <y>200</y>
       <w>168</w>
       <h>152</h>
     </coordinates>
     <panel_attributes>UserEntity
 --
-name
-phone
-email
-birthDate
 id
+email
 password
-gender
+name
+birthDate
+gender	
+phone
 businessNumber
 image
 role
@@ -66,55 +66,39 @@ role
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>176</x>
-      <y>408</y>
-      <w>328</w>
-      <h>128</h>
-    </coordinates>
-    <panel_attributes>UserRepository
---
-
---
-findByEmail
-existsByEmail
-findByNameAndPhoneAndRole
-findByNameAndPhoneAndRoleAndBusinessNumber
-findByEmailAndNameAndPhoneAndRole
-findByEmailAndNameAndPhoneAndRoleAndBusinessNumber
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>408</x>
+      <x>424</x>
       <y>632</y>
       <w>440</w>
-      <h>208</h>
+      <h>272</h>
     </coordinates>
     <panel_attributes>UserService
 --
+userRepository
+resumeRepository
+jobPostRepository
+jobApplicationRepository
+timeTableRepository
+passwordEncoder
+jwtTokenProvider
 s3Service
 EMAIL_REGEX
 EMAIL_PATTERN
-userRepository
-passwordEncoder
-jwtTokenProvider
 --
 registerUser(userDto)
 authenticateUser(email, password, expectedRole)
+getAllUsers()
 getUserByEmail(email)
 updateUserByEmail(email, userDto)
 deleteUserByEmail(email)
 findEmail(name, phone, role, businessNumber)
-resetPassword(email, name, phone, role, businessNumber, newPassword)
+resetPassword(email, newPassword)
 uploadUserImage(email, image)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
+      <x>576</x>
       <y>408</y>
       <w>168</w>
       <h>88</h>
@@ -131,29 +115,31 @@ createToken(username, role)</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
+      <x>936</x>
       <y>680</y>
       <w>384</w>
-      <h>152</h>
+      <h>160</h>
     </coordinates>
     <panel_attributes>UserController
 --
-s3Service
+userService
 --
 registerUser(userDto)
 loginUser(userDto)
+getAllUsers()
 getUserByEmail(email)
 updateUserByEmail(email, userDto)
 deleteUserByEmail(email)
 findEmail(name, phone, role, businessNumber)
-resetPassword(email, name, phone, role, businessNumber, newPassword)
+verifyUser(email, name, phone, role, businessNumber)
+resetPassword(email, newPassword)
 uploadUserImage(email, image)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>568</x>
+      <x>584</x>
       <y>136</y>
       <w>160</w>
       <h>80</h>
@@ -164,7 +150,7 @@ uploadUserImage(email, image)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>408</x>
+      <x>424</x>
       <y>136</y>
       <w>184</w>
       <h>80</h>
@@ -175,7 +161,7 @@ uploadUserImage(email, image)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>496</x>
+      <x>512</x>
       <y>256</y>
       <w>56</w>
       <h>392</h>
@@ -186,7 +172,7 @@ uploadUserImage(email, image)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>736</x>
+      <x>752</x>
       <y>344</y>
       <w>24</w>
       <h>304</h>
@@ -197,7 +183,7 @@ uploadUserImage(email, image)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>624</x>
+      <x>640</x>
       <y>488</y>
       <w>24</w>
       <h>160</h>
@@ -208,7 +194,7 @@ uploadUserImage(email, image)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>296</x>
+      <x>312</x>
       <y>528</y>
       <w>128</w>
       <h>240</h>
@@ -219,12 +205,58 @@ uploadUserImage(email, image)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>840</x>
+      <x>856</x>
       <y>776</y>
       <w>96</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1056</x>
+      <y>488</y>
+      <w>144</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>ValidationUtils
+--
+BIRTH_DATE_REGEX
+BIRTH_DATE_PATTERN
+--
+isValidBirthDate(birthDate)
+isLeapYear(year)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>856</x>
+      <y>560</y>
+      <w>288</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>340.0;10.0;340.0;130.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>432</y>
+      <w>544</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>UserRepository
+--
+findByEmail(email)
+existsByEmail(email)
+findByNameAndPhoneAndRole(name, phone, role)
+findByNameAndPhoneAndRoleAndBusinessNumber(name, phone, role, businessNumber)
+findByEmailAndNameAndPhoneAndRole(email, name, phone, role)
+findByEmailAndNameAndPhoneAndRoleAndBusinessNumber(email, name, phone, role, businessNumber)</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
