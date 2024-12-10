@@ -210,6 +210,8 @@ JPA를 사용해 DB와 연결하는 역할을 합니다.
 ## 📂 util
 - **ApiResponse.java**  
   : ApiResponse를 정의하는 소스파일
+- **ValidationUtils.java**
+  : 생년월일 양식 검증하는 소스파일
 
 ---
 
