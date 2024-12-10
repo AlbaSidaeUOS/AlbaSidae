@@ -69,6 +69,7 @@ npm start
 ```
 - Vercel Deployment
   - https://albasidae-fe.vercel.app/
+- http://localhost:3000을 사용하려면 .env 환경변수를 http://localhost:8080으로 바꿔야 함
 
 ### BE
 - Intellij IDEA 설치
