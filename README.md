@@ -74,7 +74,7 @@ npm start
 ### BE
 - Intellij IDEA 설치
 - AlbasidaeUOS/Albasidae-BE repository의 zip파일 다운로드
-- Docker에서 albasidae-backend-1 컨테이너를 제외하고 실행
+- 데이터 베이스는 Docker 문서 내 설정 참고 혹은 Docker 내의 albasidae-db-1 컨테이너를 실행
 - src/main/java/albabe.albabe에서 AlbaBeApplication 실행
 - swagger는 http://localhost:8080/swagger-ui/index.html, 웹 페이지는 localhost:3000 으로 접속
 
