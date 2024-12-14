@@ -102,8 +102,9 @@ npm start
     - 각 티켓의 ID명과 동일한 branch를 생성한다. (ID명: Front-end는 FE-# 형태, Back-end는 BE-# 형태를 따른다.)
     - Front-end는 [AlbaSidae-FE](https://github.com/AlbaSidaeUOS/AlbaSidae-FE) repository에서 작업하고 Back-end는 [AlbaSidae-BE](https://github.com/AlbaSidaeUOS/AlbaSidae-BE)에서 작업한다.
     - [AlbaSidae-FE](https://github.com/AlbaSidaeUOS/AlbaSidae-FE)와 [AlbaSidae-BE](https://github.com/AlbaSidaeUOS/AlbaSidae-BE)에서 PR(Pull Request) merge와 같은 main branch에 push가 발생할 경우, github actions를 통해 [Albasidae](https://github.com/AlbaSidaeUOS/AlbaSidae)의 main branch에 merge된다.
-  - Key Logic and Code Description
-# 프로젝트 구조
+
+
+# Project Structure
 
 # 📁 main/java/albabe/albabe
 ---
