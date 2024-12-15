@@ -86,23 +86,27 @@ npm start
 
 # Project Delieverables
 - 요구사항 분석 명세서 final version
-  - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/Requirements-Albasidae-v02.docx
+  - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/Requirements-Albasidae-v02-Final.pdf
 - Architecture 및 Design Documents
   - Software Architecture
-    - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/High-level%20Architecture%20UML%20Diagrams%20Document_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.pptx
+    - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/High-level%20Architecture%20UML%20Diagrams%20Document_%E1%84%8B%E1%85%A1%E1%86%AF%E1%84%87%E1%85%A1%E1%84%89%E1%85%B5%E1%84%83%E1%85%A2-Final.pdf
   - Software Design
-    - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/UML%20Diagram%20Raw%20file_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.zip
+    - https://github.com/AlbaSidaeUOS/AlbaSidae/tree/main/artifacts/ClassDiagram_v02_final
+    - https://github.com/AlbaSidaeUOS/AlbaSidae/tree/main/artifacts/SequenceDiagram_v02_final
   - UI Design
     - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/UI%20Design%20Document_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.pptx
 - Coding Standard
   - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/Coding%20Standard%2C%20Repository%20Management%20and%20Review%20Process_%EC%95%8C%EB%B0%94%EC%8B%9C%EB%8C%80.docx
+- API Document
+  - https://github.com/AlbaSidaeUOS/AlbaSidae/tree/main/artifacts/api%20document
 - Code
   - Branch Naming & Workflow
     - Notion에서 새로운 업무 단위마다 티켓을 생성 후, Decription에 어떤 내용인지 작성한다.
     - 각 티켓의 ID명과 동일한 branch를 생성한다. (ID명: Front-end는 FE-# 형태, Back-end는 BE-# 형태를 따른다.)
     - Front-end는 [AlbaSidae-FE](https://github.com/AlbaSidaeUOS/AlbaSidae-FE) repository에서 작업하고 Back-end는 [AlbaSidae-BE](https://github.com/AlbaSidaeUOS/AlbaSidae-BE)에서 작업한다.
     - [AlbaSidae-FE](https://github.com/AlbaSidaeUOS/AlbaSidae-FE)와 [AlbaSidae-BE](https://github.com/AlbaSidaeUOS/AlbaSidae-BE)에서 PR(Pull Request) merge와 같은 main branch에 push가 발생할 경우, github actions를 통해 [Albasidae](https://github.com/AlbaSidaeUOS/AlbaSidae)의 main branch에 merge된다.
-
+- Test cases & results
+  - https://github.com/AlbaSidaeUOS/AlbaSidae/tree/main/artifacts/TestCase
 
 # Project Structure
 
@@ -221,10 +225,6 @@ JPA를 사용해 DB와 연결하는 역할을 합니다.
 - **AlbaBeApplication.java**  
   : 프로그램 실행 소스파일
 
-
-
-- Test cases & results
-  - https://github.com/AlbaSidaeUOS/AlbaSidae/blob/main/artifacts/test%20cases%20and%20results_albasidae_v01.xlsx
 
 # Repository Structure
 ### frontend directory
